@@ -62,6 +62,18 @@ export default function Navigation() {
               Skills
             </button>
             <button
+              onClick={() => scrollToSection("education")}
+              className="text-slate-300 hover:text-thistle transition-colors duration-300"
+            >
+              Education
+            </button>
+            <button
+              onClick={() => scrollToSection("resume")}
+              className="text-slate-300 hover:text-thistle transition-colors duration-300"
+            >
+              Resume
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-slate-300 hover:text-thistle transition-colors duration-300"
             >
@@ -106,6 +118,18 @@ export default function Navigation() {
               className="block text-slate-300 hover:text-thistle transition-colors duration-300"
             >
               Skills
+            </button>
+            <button
+              onClick={() => scrollToSection("education")}
+              className="block text-slate-300 hover:text-thistle transition-colors duration-300"
+            >
+              Education
+            </button>
+            <button
+              onClick={() => scrollToSection("resume")}
+              className="block text-slate-300 hover:text-thistle transition-colors duration-300"
+            >
+              Resume
             </button>
             <button
               onClick={() => scrollToSection("contact")}
