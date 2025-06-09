@@ -7,15 +7,19 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold text-thistle mb-2">Alex Chen</h3>
-            <p className="text-slate-400">Software Engineer • Python & React Developer</p>
+            <h3 className="text-xl font-bold text-thistle mb-2">
+              Anastansia Chepkosgei
+            </h3>
+            <p className="text-slate-400">
+              Software Engineer • Python & React Developer
+            </p>
           </div>
-          
+
           <div className="flex space-x-6">
             <Button variant="ghost" size="sm" asChild>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
+              <a
+                href="https://github.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-thistle transition-colors duration-300"
               >
@@ -23,9 +27,9 @@ export default function Footer() {
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
+              <a
+                href="https://linkedin.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-thistle transition-colors duration-300"
               >
@@ -33,9 +37,9 @@ export default function Footer() {
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
+              <a
+                href="https://twitter.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-thistle transition-colors duration-300"
               >
@@ -43,7 +47,7 @@ export default function Footer() {
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild>
-              <a 
+              <a
                 href="mailto:alex.chen@email.com"
                 className="text-slate-400 hover:text-thistle transition-colors duration-300"
               >
@@ -52,9 +56,11 @@ export default function Footer() {
             </Button>
           </div>
         </div>
-        
+
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-          <p className="text-slate-500">&copy; 2024 Alex Chen. All rights reserved.</p>
+          <p className="text-slate-500">
+            &copy; 2025 Anastansia Chepkosgei. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

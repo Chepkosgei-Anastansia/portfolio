@@ -22,9 +22,9 @@ export default function ContactSection() {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
-  
+
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
@@ -44,17 +44,23 @@ export default function ContactSection() {
     onError: (error: any) => {
       toast({
         title: "Error",
-        description: error.message || "Failed to send message. Please try again.",
+        description:
+          error.message || "Failed to send message. Please try again.",
         variant: "destructive",
       });
-    }
+    },
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
-    if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim() || !formData.message.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.subject.trim() ||
+      !formData.message.trim()
+    ) {
       toast({
         title: "Error",
         description: "Please fill in all fields.",
@@ -77,15 +83,19 @@ export default function ContactSection() {
     contactMutation.mutate(formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const openWhatsApp = () => {
-    const message = encodeURIComponent("Hi! I'm interested in discussing a project with you.");
+    const message = encodeURIComponent(
+      "Hi! I'm interested in discussing a project with you.",
+    );
     window.open(`https://wa.me/15551234567?text=${message}`, "_blank");
   };
 
@@ -97,7 +107,8 @@ export default function ContactSection() {
             Let's <span className="text-thistle">Connect</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+            Have a project in mind or want to discuss opportunities? I'd love to
+            hear from you.
           </p>
         </div>
 
@@ -106,36 +117,48 @@ export default function ContactSection() {
           <div className="space-y-8">
             <Card className="bg-slate-800/50 border-slate-700">
               <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-6 text-thistle">Get In Touch</h3>
-                
+                <h3 className="text-2xl font-semibold mb-6 text-thistle">
+                  Get In Touch
+                </h3>
+
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-thistle/20 rounded-full flex items-center justify-center">
                       <Mail className="text-thistle" size={20} />
                     </div>
                     <div>
-                      <p className="text-slate-300 font-medium">alex.chen@email.com</p>
+                      <p className="text-slate-300 font-medium">
+                        anastansiachepkosgei@gmail.com
+                      </p>
                       <p className="text-slate-500 text-sm">Drop me an email</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-deep-purple/20 rounded-full flex items-center justify-center">
                       <SiWhatsapp className="text-deep-purple" size={20} />
                     </div>
                     <div>
-                      <p className="text-slate-300 font-medium">+1 (555) 123-4567</p>
-                      <p className="text-slate-500 text-sm">WhatsApp me directly</p>
+                      <p className="text-slate-300 font-medium">
+                        +254 711 264 880
+                      </p>
+                      <p className="text-slate-500 text-sm">
+                        WhatsApp me directly
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-light-purple/20 rounded-full flex items-center justify-center">
                       <Linkedin className="text-light-purple" size={20} />
                     </div>
                     <div>
-                      <p className="text-slate-300 font-medium">linkedin.com/in/alexchen</p>
-                      <p className="text-slate-500 text-sm">Connect professionally</p>
+                      <p className="text-slate-300 font-medium">
+                        www.linkedin.com/in/anastansia-chepkosgei
+                      </p>
+                      <p className="text-slate-500 text-sm">
+                        Connect professionally
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -157,7 +180,9 @@ export default function ContactSection() {
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Label htmlFor="name" className="text-slate-300 mb-2">Name</Label>
+                  <Label htmlFor="name" className="text-slate-300 mb-2">
+                    Name
+                  </Label>
                   <Input
                     type="text"
                     id="name"
@@ -169,9 +194,11 @@ export default function ContactSection() {
                     placeholder="Your Name"
                   />
                 </div>
-                
+
                 <div>
-                  <Label htmlFor="email" className="text-slate-300 mb-2">Email</Label>
+                  <Label htmlFor="email" className="text-slate-300 mb-2">
+                    Email
+                  </Label>
                   <Input
                     type="email"
                     id="email"
@@ -183,9 +210,11 @@ export default function ContactSection() {
                     placeholder="your.email@example.com"
                   />
                 </div>
-                
+
                 <div>
-                  <Label htmlFor="subject" className="text-slate-300 mb-2">Subject</Label>
+                  <Label htmlFor="subject" className="text-slate-300 mb-2">
+                    Subject
+                  </Label>
                   <Input
                     type="text"
                     id="subject"
@@ -197,9 +226,11 @@ export default function ContactSection() {
                     placeholder="Project Discussion"
                   />
                 </div>
-                
+
                 <div>
-                  <Label htmlFor="message" className="text-slate-300 mb-2">Message</Label>
+                  <Label htmlFor="message" className="text-slate-300 mb-2">
+                    Message
+                  </Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -211,7 +242,7 @@ export default function ContactSection() {
                     placeholder="Tell me about your project or opportunity..."
                   />
                 </div>
-                
+
                 <Button
                   type="submit"
                   disabled={contactMutation.isPending}
